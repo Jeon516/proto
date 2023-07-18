@@ -7,7 +7,7 @@ public class GameProcess : MonoBehaviour
 {
     public Button buttonColor1;
     public Button buttonColor2;
-    public Button buttonChangeColors; // 추가한 버튼
+    public Button buttonChangeColors;
     public Button buttonDifferentColor;
     public Image TrainLeft;
     public Image TrainRight;
@@ -17,10 +17,24 @@ public class GameProcess : MonoBehaviour
     private int combo = 0;
     private int wrongCount = 0;
     private int totalCount = 0;
+    private bool isFirstRound = true;
+
+public int CorrectCount
+{
+    get { return correct; }
+}
+
+public int WrongCount
+{
+    get { return wrongCount; }
+}
+
+public int TotalCount
+{
+    get { return totalCount; }
+}
 
     [SerializeField] public int dayValue = 1;
-
-    public Image imageToDisable; // 인스펙터에서 비활성화할 이미지를 선택
 
     private int TL;
     private int TR;
@@ -40,19 +54,24 @@ public class GameProcess : MonoBehaviour
 
     private string randomColor1;
     private string randomColor2;
-    private string randomColor3;
+    public string randomColor3;
     private List<string> previousRandomColors = new List<string>();
 
-    private string previousRandomColor3; // 이전 값을 저장할 변수 추가
+    public string previousRandomColor3; // 이전 값을 저장할 변수 추가
 
     private void Start()
     {
+        buttonChangeColors.onClick.AddListener(OnChangeColorsButtonClick);
         textLoader = GetComponent<TextLoader>();
         emblemLoader = GetComponent<EmblemLoader>();
 
         TL = 40;
         TR = 40;
         R = 20;
+        SN = 80;
+        AN = 20;
+        SE = 80;
+        AE = 20;
 
         if (dayValue >= 1 && dayValue <= 5)
         {
@@ -90,7 +109,6 @@ public class GameProcess : MonoBehaviour
 
         buttonColor1.onClick.AddListener(OnColor1ButtonClick);
         buttonColor2.onClick.AddListener(OnColor2ButtonClick);
-        buttonChangeColors.onClick.AddListener(OnChangeColorsButtonClick); // 추가한 버튼에 클릭 이벤트 추가
         buttonDifferentColor.onClick.AddListener(OnDifferentColorButtonClick);
 
         SetRandomColors();
@@ -141,51 +159,54 @@ public class GameProcess : MonoBehaviour
     }
 
     private void SetRandomColors()
+{
+    previousRandomColor3 = randomColor3;
+
+    if (randomColor1 == null || randomColor2 == null)
     {
-        if (randomColor1 == null || randomColor2 == null)
+        int randomIndex1 = Random.Range(0, availableColors.Count);
+        int randomIndex2 = Random.Range(0, availableColors.Count);
+
+        while (randomIndex1 == randomIndex2)
         {
-            int randomIndex1 = Random.Range(0, availableColors.Count);
-            int randomIndex2 = Random.Range(0, availableColors.Count);
-
-            while (randomIndex1 == randomIndex2)
-            {
-                randomIndex2 = Random.Range(0, availableColors.Count);
-            }
-
-            randomColor1 = availableColors[randomIndex1];
-            randomColor2 = availableColors[randomIndex2];
+            randomIndex2 = Random.Range(0, availableColors.Count);
         }
 
-        int totalProbability = TL + TR + R;
-        int tlProbability = TL;
-        int trProbability = TR;
-        int rProbability = R;
-
-        int randomProbability = Random.Range(1, totalProbability + 1);
-
-        if (randomProbability <= tlProbability)
-        {
-            randomColor3 = randomColor1;
-        }
-        else if (randomProbability <= tlProbability + trProbability)
-        {
-            randomColor3 = randomColor2;
-        }
-        else
-        {
-            List<string> remainingColors = availableColors.FindAll(color => color != randomColor1 && color != randomColor2);
-            int randomIndex = Random.Range(0, remainingColors.Count);
-            randomColor3 = remainingColors[randomIndex];
-        }
-
-        // 이전 값을 저장
-        previousRandomColor3 = randomColor3;
-
-        if (previousRandomColors.Count > 2)
-        {
-            previousRandomColors.RemoveAt(0);
-        }
+        randomColor1 = availableColors[randomIndex1];
+        randomColor2 = availableColors[randomIndex2];
+        isFirstRound = false;
     }
+
+    int totalProbability = TL + TR + R;
+    int tlProbability = TL;
+    int trProbability = TR;
+    int rProbability = R;
+
+    int randomProbability = Random.Range(1, totalProbability + 1);
+
+    if (randomProbability <= tlProbability)
+    {
+        randomColor3 = randomColor1;
+    }
+    else if (randomProbability <= tlProbability + trProbability)
+    {
+        randomColor3 = randomColor2;
+    }
+    else
+    {
+        List<string> remainingColors = availableColors.FindAll(color => color != randomColor1 && color != randomColor2);
+        int randomIndex = Random.Range(0, remainingColors.Count);
+        randomColor3 = remainingColors[randomIndex];
+    }
+
+    if (previousRandomColors.Count > 2)
+    {
+        previousRandomColors.RemoveAt(0);
+    }
+
+    previousRandomColors.Add(randomColor3);
+}
+
 
     private Sprite GetTrainSprite(string color, bool isLeftSide)
     {
@@ -235,231 +256,230 @@ public class GameProcess : MonoBehaviour
         Debug.Log("RandomColor3: " + randomColor3);
     }
 
+
     private void OnColor1ButtonClick()
+{
+    if (randomColor1 == randomColor3)
     {
-        if (randomColor1 == randomColor3)
+        if (previousRandomColor3 == "ticket to heaven 3" && textLoader.TextValue == "바다의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_03")
         {
-            if (randomColor3 == "ticket to heaven 3" && textLoader.TextValue == "파도의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_03")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 4" && textLoader.TextValue == "행운의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_04")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 6" && textLoader.TextValue == "간식의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_06")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 7" && textLoader.TextValue == "자연의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_07")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 8" && textLoader.TextValue == "과일의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_08")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "마음의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 13" && textLoader.TextValue == "겨울의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_13")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 15" && textLoader.TextValue == "별빛의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_15")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 21" && textLoader.TextValue == "모험의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_21")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 35" && textLoader.TextValue == "도서의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_35")
-            {
-                combo++;
-                correct++;
-            }
-            else
-            {
-                combo = 0;
-                wrongCount++;
-            }
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 4" && textLoader.TextValue == "행운의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_04")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 6" && textLoader.TextValue == "간식의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_06")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 7" && textLoader.TextValue == "자연의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_07")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 8" && textLoader.TextValue == "과일의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_08")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 9" && textLoader.TextValue == "마음의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 13" && textLoader.TextValue == "겨울의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_13")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 15" && textLoader.TextValue == "별빛의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_15")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 21" && textLoader.TextValue == "모험의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_21")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 35" && textLoader.TextValue == "도서의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_35")
+        {
+            combo++;
+            correct++;
         }
         else
         {
             combo = 0;
             wrongCount++;
         }
-
-        totalCount++;
-        SetRandomColors();
-        TrainLeft.sprite = GetTrainSprite(randomColor1, true); // TrainLeft 이미지 변경
-        UpdateGameRound();
-        Debug.Log("Combo: " + combo + " Correct: " + correct + " Wrong: " + wrongCount + " Total: " + totalCount);
-
-        if (OnButtonClicked != null)
-        {
-            OnButtonClicked();
-        }
+    }
+    else
+    {
+        combo = 0;
+        wrongCount++;
     }
 
-    private void OnColor2ButtonClick()
+    totalCount++;
+    SetRandomColors();
+    TrainLeft.sprite = GetTrainSprite(randomColor1, true);
+    UpdateGameRound();
+    Debug.Log("Combo: " + combo + " Correct: " + correct + " Wrong: " + wrongCount + " Total: " + totalCount);
+    Debug.Log("Pre: " + previousRandomColor3 + " RandomColor3: " + randomColor3);
+
+    if (OnButtonClicked != null)
     {
-        if (randomColor2 == randomColor3)
+        OnButtonClicked();
+    }
+}
+
+private void OnColor2ButtonClick()
+{
+    if (randomColor2 == randomColor3)
+    {
+        if (previousRandomColor3 == "ticket to heaven 3" && textLoader.TextValue == "바다의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_03")
         {
-            if (randomColor3 == "ticket to heaven 3" && textLoader.TextValue == "파도의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_03")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 4" && textLoader.TextValue == "행운의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_04")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 6" && textLoader.TextValue == "간식의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_06")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 7" && textLoader.TextValue == "자연의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_07")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 8" && textLoader.TextValue == "과일의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_08")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "마음의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 13" && textLoader.TextValue == "겨울의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_13")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 15" && textLoader.TextValue == "별빛의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_15")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 21" && textLoader.TextValue == "모험의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_21")
-            {
-                combo++;
-                correct++;
-            }
-            else if (randomColor3 == "ticket to heaven 35" && textLoader.TextValue == "도서의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_35")
-            {
-                combo++;
-                correct++;
-            }
-            else
-            {
-                combo = 0;
-                wrongCount++;
-            }
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 4" && textLoader.TextValue == "행운의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_04")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 6" && textLoader.TextValue == "간식의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_06")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 7" && textLoader.TextValue == "자연의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_07")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 8" && textLoader.TextValue == "과일의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_08")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 9" && textLoader.TextValue == "마음의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 13" && textLoader.TextValue == "겨울의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_13")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 15" && textLoader.TextValue == "별빛의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_15")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 21" && textLoader.TextValue == "모험의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_21")
+        {
+            combo++;
+            correct++;
+        }
+        else if (previousRandomColor3 == "ticket to heaven 35" && textLoader.TextValue == "도서의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_35")
+        {
+            combo++;
+            correct++;
         }
         else
         {
             combo = 0;
             wrongCount++;
         }
-
-        totalCount++;
-        SetRandomColors();
-        TrainRight.sprite = GetTrainSprite(randomColor2, false); // TrainRight 이미지 변경
-        UpdateGameRound();
-        Debug.Log("Combo: " + combo + " Correct: " + correct + " Wrong: " + wrongCount + " Total: " + totalCount);
-
-        if (OnButtonClicked != null)
-        {
-            OnButtonClicked();
-        }
     }
-
-    private void OnChangeColorsButtonClick()
+    else
     {
-        if (imageToDisable != null)
-        {
-            imageToDisable.gameObject.SetActive(false); // 선택한 이미지 비활성화
-        }
-
-        SetRandomColors();
-        TrainLeft.sprite = GetTrainSprite(randomColor1, true); // TrainLeft 이미지 변경
-        TrainRight.sprite = GetTrainSprite(randomColor2, false); // TrainRight 이미지 변경
-        UpdateGameRound();
-        Debug.Log("Combo: " + combo + " Correct: " + correct + " Wrong: " + wrongCount + " Total: " + totalCount);
-
-        if (OnButtonClicked != null)
-        {
-            OnButtonClicked();
-        }
+        combo = 0;
+        wrongCount++;
     }
+
+    totalCount++;
+    SetRandomColors();
+    TrainRight.sprite = GetTrainSprite(randomColor2, false);
+    UpdateGameRound();
+    Debug.Log("Combo: " + combo + " Correct: " + correct + " Wrong: " + wrongCount + " Total: " + totalCount);
+    Debug.Log("Pre: " + previousRandomColor3 + " RandomColor3: " + randomColor3);
+
+    if (OnButtonClicked != null)
+    {
+        OnButtonClicked();
+    }
+}
+
+private void OnChangeColorsButtonClick()
+{
+    SetRandomColors();
+    TrainLeft.sprite = GetTrainSprite(randomColor1, true);
+    TrainRight.sprite = GetTrainSprite(randomColor2, false);
+    UpdateGameRound();
+    Debug.Log("Combo: " + combo + " Correct: " + correct + " Wrong: " + wrongCount + " Total: " + totalCount);
+    Debug.Log("Pre: " + previousRandomColor3 + " RandomColor3: " + randomColor3);
+
+    if (OnButtonClicked != null)
+    {
+        OnButtonClicked();
+    }
+}
 
     private void OnDifferentColorButtonClick()
     {
         if (randomColor1 != randomColor3 && randomColor2 != randomColor3)
         {
-            if (randomColor3 != "ticket to heaven 3" || textLoader.TextValue != "파도의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_03")
+            if (previousRandomColor3 != "ticket to heaven 3" || textLoader.TextValue != "바다의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_03")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 4" || textLoader.TextValue != "행운의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_04")
+            else if (previousRandomColor3 != "ticket to heaven 4" || textLoader.TextValue != "행운의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_04")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 6" || textLoader.TextValue != "간식의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_06")
+            else if (previousRandomColor3 != "ticket to heaven 6" || textLoader.TextValue != "간식의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_06")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 7" || textLoader.TextValue != "자연의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_07")
+            else if (previousRandomColor3 != "ticket to heaven 7" || textLoader.TextValue != "자연의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_07")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 8" || textLoader.TextValue != "과일의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_08")
+            else if (previousRandomColor3 != "ticket to heaven 8" || textLoader.TextValue != "과일의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_08")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 9" || textLoader.TextValue != "마음의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_09")
+            else if (previousRandomColor3 != "ticket to heaven 9" || textLoader.TextValue != "마음의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_09")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 13" || textLoader.TextValue != "겨울의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_13")
+            else if (previousRandomColor3 != "ticket to heaven 13" || textLoader.TextValue != "겨울의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_13")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 15" || textLoader.TextValue != "별빛의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_15")
+            else if (previousRandomColor3 != "ticket to heaven 15" || textLoader.TextValue != "별빛의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_15")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 21" || textLoader.TextValue != "모험의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_21")
+            else if (previousRandomColor3 != "ticket to heaven 21" || textLoader.TextValue != "모험의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_21")
             {
                 combo++;
                 correct++;
             }
-            else if (randomColor3 != "ticket to heaven 35" || textLoader.TextValue != "도서의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_35")
+            else if (previousRandomColor3 != "ticket to heaven 35" || textLoader.TextValue != "도서의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_35")
             {
                 combo++;
                 correct++;
@@ -478,11 +498,12 @@ public class GameProcess : MonoBehaviour
 
         totalCount++;
         SetRandomColors();
-        TrainLeft.sprite = GetTrainSprite(randomColor1, true); // TrainLeft 이미지 변경
-        TrainRight.sprite = GetTrainSprite(randomColor2, false); // TrainRight 이미지 변경
+        TrainLeft.sprite = GetTrainSprite(randomColor1, true);
+        TrainRight.sprite = GetTrainSprite(randomColor2, false);
         UpdateGameRound();
         Debug.Log("Combo: " + combo + " Correct: " + correct + " Wrong: " + wrongCount + " Total: " + totalCount);
         Debug.Log("emblem" + emblemLoader.emblempng + "text" + textLoader.TextValue);
+        Debug.Log("Pre: " + previousRandomColor3 + "RandomColor3: " + randomColor3);
 
         if (OnButtonClicked != null)
         {

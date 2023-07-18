@@ -34,7 +34,7 @@ public class EmblemLoader : MonoBehaviour
 
             if (setDataList != null && setDataList.Sets.Count > 0)
             {
-                string randomColor3 = GameProcess.emblemcolor; // Use the static emblemcolor variable
+                string randomColor3 = gameProcess.previousRandomColor3; // Use the static emblemcolor variable
 
                 List<SetData> matchingSets = setDataList.Sets.FindAll(setData => setData.Color == randomColor3);
 
