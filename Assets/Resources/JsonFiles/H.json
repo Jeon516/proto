@@ -1,0 +1,124 @@
+{  
+  "items": [
+    {
+      "myClass": "H",
+      "sort": "무지개색",
+      "name": "활발함이 담긴  무지개 케이크",
+      "itemText": "활발함이 담긴 무지개맛 케이크이다.\n활발함 +2",
+      "conv": "한입 먹으니까 힘이 솟아오르는 거 같아, 나 호랑인가?",
+      "firstStatType": 101,
+      "firstStatValue": 2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "a rainbow cake filled with vitality"
+    },
+    {
+      "myClass": "H",
+      "sort": "무지개색",
+      "name": "사회성이 담긴 무지개 떡",
+      "itemText": "사회성이 담긴 무지개맛 떡이다.\n사회성 +2",
+      "conv": "색깔별로 다른 맛이 나는건가? 그건 아닌가? 으응?",
+      "firstStatType": 102,
+      "firstStatValue": 2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "Rainbow rive cake with sociality"
+    },
+    {
+      "myClass": "H",
+      "sort": "무지개색",
+      "name": "대담함이 담긴  무지개 팬케이크",
+      "itemText": "대담함이 담긴 무지개맛 팬케이크이다.\n대담함+2",
+      "conv": "크아아앙! 맞아 난 용감한 강아지야",
+      "firstStatType": 103,
+      "firstStatValue": 2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "Rainbow Pancake with Boldness"
+    },
+    {
+      "myClass": "H",
+      "sort": "무지개색",
+      "name": "호기심이 담긴 무지개 막대사탕",
+      "itemText": "호기심이 담긴 무지개맛 막대사탕이다.\n호기심 +2",
+      "conv": "우왕 이 막대사탕 어떻게 만든걸까? 왜 무지개 색인거지? 천국에서만 있는거 맞지?",
+      "firstStatType": 104,
+      "firstStatValue": 2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "Curious rainbow lollipop"
+    },
+    {
+      "myClass": "H",
+      "sort": "무지개색",
+      "name": "다양한 감정이 담긴 무지개 슬러시",
+      "itemText": "애정표현이 담긴 무지개맛 슬러쉬이다.\n애정표현+2",
+      "conv": "이 슬러시를 마시니까 다양한 감정이 느껴져 우와 신기해",
+      "firstStatType": 105,
+      "firstStatValue": 2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "Rainbow slush with various emotions"
+    },
+    {
+      "myClass": "H",
+      "sort": "흰색",
+      "name": "차분함이 담긴 생크림 케이크",
+      "itemText": "차분함이 담긴 고소한 생크림 케이크이다.\n차분함+2",
+      "conv": "마음이 가라앉아져~ 후~",
+      "firstStatType": 101,
+      "firstStatValue": -2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "a calm whipped cream cake"
+    },
+    {
+      "myClass": "H",
+      "sort": "흰색",
+      "name": "독립성이 담긴 백설기",
+      "itemText": "독립성이 담긴 쫀득한 백설기이다.\n독립성+2",
+      "conv": "구름같은 게 생크림이야? 이걸 먹으니까 마음이 차분해져",
+      "firstStatType": 102,
+      "firstStatValue": -2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "Baekseolgi with independence"
+    },
+    {
+      "myClass": "H",
+      "sort": "흰색",
+      "name": "신중함이 담긴 플레인 팬케이크",
+      "itemText": "신중함이 담긴 풍미가득한 플레인 팬케이크이다.\n신중함+2",
+      "conv": "음.. 이 팬케이크를 먹으니까 신중해지는 기분이야",
+      "firstStatType": 103,
+      "firstStatValue": -2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "Plain pancakes with prudence"
+    },
+    {
+      "myClass": "H",
+      "sort": "흰색",
+      "name": "사색이 담긴 하얀 사탕",
+      "itemText": "조용함이 담긴 달달한 하얀사탕이다.\n조용함+2",
+      "conv": "이 사탕을 먹으니까 이상하게 마음이 평온해져",
+      "firstStatType": 104,
+      "firstStatValue": -2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "a sepculative white candy"
+    },
+    {
+      "myClass": "H",
+      "sort": "흰색",
+      "name": "냉정함이 담긴 하얀 슬러시",
+      "itemText": "냉정함이 담긴 시원한 하얀슬러시이다.\n냉정함+2",
+      "conv": "읍! 차가워~ 차가운 걸 먹었더니 침착해지네",
+      "firstStatType": 105,
+      "firstStatValue": -2,
+      "secondStatType": 0,
+      "secondStatValue": 0,
+      "imageName": "a cold white slush"
+    }
+  ]
+}

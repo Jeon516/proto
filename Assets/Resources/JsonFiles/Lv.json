@@ -1,0 +1,19 @@
+{
+  "levels": [
+    {
+      "level": "H",
+      "probability": 10,
+      "JsonFileName": "Assets/DataFile/food/High.json"
+    },
+    {
+      "level": "M",
+      "probability": 30,
+      "JsonFileName": "Assets/DataFile/food/Middle.json"
+    },
+    {
+      "level": "L",
+      "probability": 60,
+      "JsonFileName": "Assets/DataFile/food/Low.json"
+    }
+  ]
+}

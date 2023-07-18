@@ -1,0 +1,54 @@
+{
+    "Sets": [
+        {
+            "Color": "ticket to heaven 3",
+            "emblemAssets": "FantasyEmblem3_256_B_03",
+            "Sort": "파도의"
+        },
+        {
+            "Color": "ticket to heaven 4",
+            "emblemAssets": "FantasyEmblem3_256_B_04",
+            "Sort": "행운의"
+        },
+        {
+            "Color": "ticket to heaven 6",
+            "emblemAssets": "FantasyEmblem3_256_B_06",
+            "Sort": "간식의"
+        },
+        {
+            "Color": "ticket to heaven 7",
+            "emblemAssets": "FantasyEmblem3_256_B_07",
+            "Sort": "자연의"
+        },
+        {
+            "Color": "ticket to heaven 8",
+            "emblemAssets": "FantasyEmblem3_256_B_08",
+            "Sort": "과일의"
+        },
+        {
+            "Color": "ticket to heaven 9",
+            "emblemAssets": "FantasyEmblem3_256_B_09",
+            "Sort": "미용의"
+        },
+        {
+            "Color": "ticket to heaven 13",
+            "emblemAssets": "FantasyEmblem3_256_B_13",
+            "Sort": "겨울의"
+        },
+        {
+            "Color": "ticket to heaven 15",
+            "emblemAssets": "FantasyEmblem3_256_B_15",
+            "Sort": "별빛의"
+        },
+        {
+            "Color": "ticket to heaven 21",
+            "emblemAssets": "FantasyEmblem3_256_B_21",
+            "Sort": "모험의"
+        },
+        {
+            "Color": "ticket to heaven 35",
+            "emblemAssets": "FantasyEmblem3_256_B_35",
+            "Sort": "도서의"
+        }
+    ]
+}
