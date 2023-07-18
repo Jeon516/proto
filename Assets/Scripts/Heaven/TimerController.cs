@@ -11,7 +11,7 @@ public class TimerController : MonoBehaviour
     public Button activatePrefabButton; 
     public Button[] interactiveButtons;
 
-    private float timeLeft;
+    public float timeLeft;
     private bool allowInteraction = false; 
 
     private void Start()

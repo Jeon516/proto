@@ -36,6 +36,6 @@ public class Result : MonoBehaviour
 
         correctRateText.text = "정답률: " + correctRate.ToString("F1") + "%";
         wrongRateText.text = "오답률: " + wrongRate.ToString("F1") + "%";
-        correctPerMinText.text = "분당 정답수: " + correctPerMin.ToString("F1");
+        correctPerMinText.text = "초당 정답수: " + correctPerMin.ToString("F1");
     }
 }

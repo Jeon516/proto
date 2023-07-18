@@ -18,21 +18,22 @@ public class GameProcess : MonoBehaviour
     private int wrongCount = 0;
     private int totalCount = 0;
     private bool isFirstRound = true;
+    private TimerController timerController;
 
-public int CorrectCount
-{
-    get { return correct; }
-}
+    public int CorrectCount
+    {
+        get { return correct; }
+    }
 
-public int WrongCount
-{
-    get { return wrongCount; }
-}
+    public int WrongCount
+    {
+        get { return wrongCount; }
+    }
 
-public int TotalCount
-{
-    get { return totalCount; }
-}
+    public int TotalCount
+    {
+        get { return totalCount; }
+    }
 
     [SerializeField] public int dayValue = 1;
 
@@ -59,11 +60,15 @@ public int TotalCount
 
     public string previousRandomColor3; // 이전 값을 저장할 변수 추가
 
+    private float timeLeft; // timeLeft 변수 추가
+
     private void Start()
     {
         buttonChangeColors.onClick.AddListener(OnChangeColorsButtonClick);
         textLoader = GetComponent<TextLoader>();
         emblemLoader = GetComponent<EmblemLoader>();
+        timerController = FindObjectOfType<TimerController>();
+        timeLeft = timerController.timeLeft;
 
         TL = 40;
         TR = 40;
@@ -113,7 +118,9 @@ public int TotalCount
 
         SetRandomColors();
         UpdateGameRound();
+        timeLeft = timerController.timeLeft; // timeLeft 변수 초기화
     }
+
 
     private void LoadSetDataList()
     {
@@ -315,12 +322,14 @@ public int TotalCount
         {
             combo = 0;
             wrongCount++;
+            timerController.timeLeft -= 2f;
         }
     }
     else
     {
         combo = 0;
         wrongCount++;
+        timerController.timeLeft -= 2f;
     }
 
     totalCount++;
@@ -394,12 +403,14 @@ private void OnColor2ButtonClick()
         {
             combo = 0;
             wrongCount++;
+            timerController.timeLeft -= 2f;
         }
     }
     else
     {
         combo = 0;
         wrongCount++;
+        timerController.timeLeft -= 2f;
     }
 
     totalCount++;
@@ -432,7 +443,7 @@ private void OnChangeColorsButtonClick()
 
     private void OnDifferentColorButtonClick()
     {
-        if (randomColor1 != randomColor3 && randomColor2 != randomColor3)
+        if (randomColor1 != randomColor3 || randomColor2 != randomColor3)
         {
             if (previousRandomColor3 != "ticket to heaven 3" || textLoader.TextValue != "바다의" || emblemLoader.emblempng != "FantasyEmblem3_256_B_03")
             {
@@ -488,12 +499,14 @@ private void OnChangeColorsButtonClick()
             {
                 combo = 0;
                 wrongCount++;
+                timerController.timeLeft -= 2f;
             }
         }
         else
         {
             combo = 0;
             wrongCount++;
+            timerController.timeLeft -= 2f;
         }
 
         totalCount++;

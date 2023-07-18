@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af62e6e6183c2be43b0be759b2caef00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDuration: 60
+  gameDuration: 120
   timerText: {fileID: 976170353}
   exitButton: {fileID: 1700172382}
   startButtonPrefab: {fileID: 671609564}
@@ -632,6 +632,7 @@ MonoBehaviour:
   - {fileID: 1114729284}
   - {fileID: 127521713}
   - {fileID: 1383427513}
+  timeLeft: 0
 --- !u!114 &490307897
 MonoBehaviour:
   m_ObjectHideFlags: 0
