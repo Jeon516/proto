@@ -10,17 +10,9 @@ public class TimerController : MonoBehaviour
     public GameObject newPrefab;
     public Button activatePrefabButton; 
     public Button[] interactiveButtons;
-    public Button ResultButton;
 
     public float timeLeft;
-    private bool allowInteraction = false;
-
-    public static TimerController Instance { get; private set; } = null;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
+    private bool allowInteraction = false; 
 
     private void Start()
     {
@@ -60,7 +52,6 @@ public class TimerController : MonoBehaviour
 
     private void EndGame()
     {
-        ResultButton.interactable = true;
         allowInteraction = false; 
         exitButton.interactable = true;
         SetInteractiveButtonsInteractable(false);
@@ -109,7 +100,6 @@ public class TimerController : MonoBehaviour
 
     public void ResetGame()
     {
-        ResultButton.interactable = false;
         allowInteraction = false;
         timeLeft = 0f;
         exitButton.interactable = false;
