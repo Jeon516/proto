@@ -1,0 +1,95 @@
+{
+    "m_SelectedDeviceId": "R59MC02RD5F",
+    "m_SelectedPackage": {
+        "deviceId": "R59MC02RD5F",
+        "name": "com.DefaultCompany.protover2",
+        "processId": 16664,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "R59MC02RD5F",
+            "name": "com.ksmobile.launcher",
+            "processId": 2559,
+            "exited": false
+        },
+        {
+            "deviceId": "R59MC02RD5F",
+            "name": "com.DefaultCompany.protover2",
+            "processId": 21723,
+            "exited": false
+        },
+        {
+            "deviceId": "R59MC02RD5F",
+            "name": "com.DefaultCompany.protover2",
+            "processId": 29220,
+            "exited": false
+        },
+        {
+            "deviceId": "R59MC02RD5F",
+            "name": "com.DefaultCompany.protover2",
+            "processId": 18368,
+            "exited": false
+        },
+        {
+            "deviceId": "R59MC02RD5F",
+            "name": "com.DefaultCompany.protover2",
+            "processId": 16664,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}

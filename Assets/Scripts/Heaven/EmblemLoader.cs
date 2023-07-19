@@ -112,23 +112,22 @@ public class EmblemLoader : MonoBehaviour
         }
     }
 
-private void LoadEmblemImage(string emblemValue)
-{
-    string imagePath = Path.Combine("Assets","Download Assets", "Fantasy Emblem3(living) Set Pack", "FantasyEmblem3_128_W", emblemValue + ".png");
-    imagePath = imagePath.Replace("\\", "/");
-
-    Texture2D texture = LoadTextureFromFile(imagePath);
-
-    if (texture != null)
+    private void LoadEmblemImage(string emblemValue)
     {
-        Sprite emblemSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
-        emblemImage.sprite = emblemSprite;
+        string imagePath = Path.Combine("Download Assets", "Fantasy Emblem3(living) Set Pack", "FantasyEmblem3_128_W", emblemValue);
+
+        Texture2D texture = Resources.Load<Texture2D>(imagePath);
+
+        if (texture != null)
+        {
+            Sprite emblemSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.one * 0.5f);
+            emblemImage.sprite = emblemSprite;
+        }
+        else
+        {
+            Debug.LogError("해당 주소에 대한 엠블럼 이미지를 찾을 수 없습니다: " + emblemValue);
+        }
     }
-    else
-    {
-        Debug.LogError("해당 주소에 대한 엠블럼 이미지를 찾을 수 없습니다: " + emblemValue);
-    }
-}
 
 
     private Texture2D LoadTextureFromFile(string filePath)
