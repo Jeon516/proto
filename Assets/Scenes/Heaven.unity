@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af62e6e6183c2be43b0be759b2caef00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDuration: 180
+  gameDuration: 5
   timerText: {fileID: 976170353}
   exitButton: {fileID: 1273077022}
   startButtonPrefab: {fileID: 671609564}
