@@ -12,6 +12,7 @@ public class GameProcess : MonoBehaviour
     public Image TrainLeft;
     public Image TrainRight;
     public Image Ticket;
+    public Text DayText; // 날짜 텍스트
     public static string emblemcolor;
     private int correct = 0;
     private int combo = 0;
@@ -62,6 +63,14 @@ public class GameProcess : MonoBehaviour
 
     private float timeLeft; // timeLeft 변수 추가
 
+    private void Awake()
+    {
+        dayValue = 1;
+    }
+    private void Update()
+    {
+        DayText.text = "Day : " + dayValue;
+    }
     private void Start()
     {
         buttonChangeColors.onClick.AddListener(OnChangeColorsButtonClick);

@@ -7,6 +7,11 @@ public class Result : MonoBehaviour
     public Text wrongRateText; // 오답률을 표시할 텍스트
     public Text correctPerMinText; // 분당 정답수를 표시할 텍스트
     private GameProcess gameProcess; // GameProcess 스크립트의 인스턴스를 참조하는 변수
+    public GameObject Return; // 리턴버튼
+    public GameObject Restart; // 스타트 버튼
+    public GameObject ResultPref; // 결과 화면
+    public GameObject EndText; // 끝 텍스트
+
 
     private void Start()
     {
@@ -25,6 +30,15 @@ public class Result : MonoBehaviour
             Debug.LogError("GameProcess 인스턴스가 할당되지 않았습니다.");
             return; // gameProcess가 null이면 업데이트를 종료
         }
+        if (gameProcess.dayValue == 3)
+        {
+            Restart.SetActive(false);
+            EndText.SetActive(true);
+        }
+        else if (gameProcess.dayValue < 3)
+        {
+            Restart.SetActive(true);
+        } // 날짜가 20일인지 아닌지 여부
 
         int correctCount = gameProcess.CorrectCount;
         int wrongCount = gameProcess.WrongCount;
@@ -37,5 +51,12 @@ public class Result : MonoBehaviour
         correctRateText.text = "정답률: " + correctRate.ToString("F1") + "%";
         wrongRateText.text = "오답률: " + wrongRate.ToString("F1") + "%";
         correctPerMinText.text = "초당 정답수: " + correctPerMin.ToString("F1");
+    }
+    public void OnClick_Restart()
+    {
+        TimerController.Instance.ResetGame();
+        gameProcess.dayValue++;
+        Restart.SetActive(true);
+        ResultPref.SetActive(false);
     }
 }
