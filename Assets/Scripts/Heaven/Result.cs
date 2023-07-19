@@ -30,12 +30,12 @@ public class Result : MonoBehaviour
             Debug.LogError("GameProcess 인스턴스가 할당되지 않았습니다.");
             return; // gameProcess가 null이면 업데이트를 종료
         }
-        if (gameProcess.dayValue == 3)
+        if (gameProcess.dayValue == 20)
         {
             Restart.SetActive(false);
             EndText.SetActive(true);
         }
-        else if (gameProcess.dayValue < 3)
+        else if (gameProcess.dayValue < 20)
         {
             Restart.SetActive(true);
         } // 날짜가 20일인지 아닌지 여부
