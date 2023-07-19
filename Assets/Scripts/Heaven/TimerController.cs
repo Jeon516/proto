@@ -16,32 +16,7 @@ public class TimerController : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 1f;
-
-       
-        if (exitButton != null)
-        {
-            exitButton.interactable = false;
-        }
-
-        
-        SetInteractiveButtonsInteractable(false);
-
-        
-        if (startButtonPrefab != null)
-        {
-            Button startButton = startButtonPrefab.GetComponentInChildren<Button>();
-            if (startButton != null)
-            {
-                startButton.onClick.AddListener(StartGame);
-            }
-        }
-
-        
-        if (activatePrefabButton != null)
-        {
-            activatePrefabButton.onClick.AddListener(ActivateNewPrefab);
-        }
+        ResetGame();
     }
 
     private void Update()
@@ -77,16 +52,8 @@ public class TimerController : MonoBehaviour
 
     private void EndGame()
     {
-
         allowInteraction = false; 
-
-
-        if (exitButton != null)
-        {
-            exitButton.interactable = true;
-        }
-
-
+        exitButton.interactable = true;
         SetInteractiveButtonsInteractable(false);
     }
 
@@ -118,20 +85,8 @@ public class TimerController : MonoBehaviour
     {
         allowInteraction = true;
         timeLeft = gameDuration;
-
-
-        if (startButtonPrefab != null)
-        {
-            startButtonPrefab.SetActive(false);
-        }
-
-
-        if (exitButton != null)
-        {
-            exitButton.interactable = false;
-        }
-
-
+        startButtonPrefab.SetActive(false);
+        exitButton.interactable = false;
         SetInteractiveButtonsInteractable(true);
     }
 
@@ -142,4 +97,38 @@ public class TimerController : MonoBehaviour
             newPrefab.SetActive(true);
         }
     }
+
+    public void ResetGame()
+    {
+        allowInteraction = false;
+        timeLeft = 0f;
+        exitButton.interactable = false;
+        SetInteractiveButtonsInteractable(false);
+
+        if (startButtonPrefab != null)
+        {
+            startButtonPrefab.SetActive(true);
+            Button startButton = startButtonPrefab.GetComponentInChildren<Button>();
+            if (startButton != null)
+            {
+                startButton.onClick.AddListener(StartGame);
+            }
+        }
+
+        if (newPrefab != null)
+        {
+            newPrefab.SetActive(false);
+        }
+
+        if (activatePrefabButton != null)
+        {
+            activatePrefabButton.onClick.AddListener(ActivateNewPrefab);
+        }
+    }
+
+public void OnExitButtonClicked()
+{
+    Debug.Log("Exit button clicked.");
+    ResetGame();
+}
 }

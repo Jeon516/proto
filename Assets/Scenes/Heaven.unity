@@ -624,7 +624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameDuration: 120
   timerText: {fileID: 976170353}
-  exitButton: {fileID: 1700172382}
+  exitButton: {fileID: 1569036513}
   startButtonPrefab: {fileID: 671609564}
   newPrefab: {fileID: 487131471}
   activatePrefabButton: {fileID: 1749288747}
@@ -1912,7 +1912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 228702880935307399, guid: d50043ae1b88fa241a47699bffa18259, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1026608792250616133, guid: d50043ae1b88fa241a47699bffa18259, type: 3}
       propertyPath: m_Text
@@ -2018,6 +2018,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 6993559807153967529, guid: d50043ae1b88fa241a47699bffa18259, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993559807153967529, guid: d50043ae1b88fa241a47699bffa18259, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7342418217455802244, guid: d50043ae1b88fa241a47699bffa18259, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2044,9 +2052,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d50043ae1b88fa241a47699bffa18259, type: 3}
---- !u!114 &1700172382 stripped
+--- !u!114 &1569036513 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8573367783213170894, guid: d50043ae1b88fa241a47699bffa18259, type: 3}
+  m_CorrespondingSourceObject: {fileID: 211112751169055243, guid: d50043ae1b88fa241a47699bffa18259, type: 3}
   m_PrefabInstance: {fileID: 1569036512}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
