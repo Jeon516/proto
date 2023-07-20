@@ -20,7 +20,6 @@ public class GameProcess : MonoBehaviour
     private int totalCount = 0;
     private bool isFirstRound = true;
     private TimerController timerController;
-    public int money=0;
 
     public int CorrectCount
     {
@@ -364,23 +363,6 @@ public class GameProcess : MonoBehaviour
             WrongSound();
         }
 
-        if (combo <=4 && combo>=1){
-            money += 100;
-            Debug.Log("재화 100 획득");
-        }
-        else if (combo <=9 && combo>=5){
-            money += 130;
-            Debug.Log("재화 130 획득");
-        }
-        else if (combo <=14 && combo>=10){
-            money += 160;
-            Debug.Log("재화 160 획득");
-        }
-        else{
-            money +=200;
-            Debug.Log("재화 200 획득");
-        }
-
         totalCount++;
         SetRandomColors();
         TrainLeft.sprite = GetTrainSprite(randomColor1, true);
@@ -472,22 +454,6 @@ public class GameProcess : MonoBehaviour
             wrongCount++;
             timerController.timeLeft -= 2f;
             WrongSound();
-        }
-        if (combo <=4 && combo>=1){
-            money += 100;
-            Debug.Log("재화 100 획득");
-        }
-        else if (combo <=9 && combo>=5){
-            money += 130;
-            Debug.Log("재화 130 획득");
-        }
-        else if (combo <=14 && combo>=10){
-            money += 160;
-            Debug.Log("재화 160 획득");
-        }
-        else{
-            money +=200;
-            Debug.Log("재화 200 획득");
         }
 
         totalCount++;
@@ -685,23 +651,6 @@ public class GameProcess : MonoBehaviour
             CorrectSound();
         }
 
-        if (combo <=4 && combo>=1){
-            money += 100;
-            Debug.Log("재화 100 획득");
-        }
-        else if (combo <=9 && combo>=5){
-            money += 130;
-            Debug.Log("재화 130 획득");
-        }
-        else if (combo <=14 && combo>=10){
-            money += 160;
-            Debug.Log("재화 160 획득");
-        }
-        else{
-            money +=200;
-            Debug.Log("재화 200 획득");
-        }
-        
         totalCount++;
         SetRandomColors();
         TrainLeft.sprite = GetTrainSprite(randomColor1, true);
