@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -54,36 +55,40 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1452}
     - Class: 114
-      Script: {instanceID: 1746}
+      Script: {instanceID: 1750}
     - Class: 114
-      Script: {instanceID: 2056}
+      Script: {instanceID: 2070}
     - Class: 114
-      Script: {instanceID: 2254}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2684}
+      Script: {instanceID: 2710}
     - Class: 114
-      Script: {instanceID: 2858}
+      Script: {instanceID: 2890}
     - Class: 114
-      Script: {instanceID: 3096}
+      Script: {instanceID: 3144}
     - Class: 114
-      Script: {instanceID: 3344}
+      Script: {instanceID: 3400}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 3408}
     - Class: 114
-      Script: {instanceID: 3466}
+      Script: {instanceID: 3526}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3530}
     - Class: 114
-      Script: {instanceID: 3776}
+      Script: {instanceID: 3840}
     - Class: 114
-      Script: {instanceID: 5238}
+      Script: {instanceID: 5342}
     - Class: 114
-      Script: {instanceID: 5432}
+      Script: {instanceID: 5538}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -421,7 +426,7 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: 586c6860ab3162e1115151a5f274abcc
+      Hash: 4cb9fb48ac3376e45490ca23b02c4277
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameProcess
@@ -710,4 +715,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Heaven.unity
-  playerPath: C:/Users/admin/Desktop/RealHeaven.apk
+  playerPath: C:/Users/admin/Desktop/OverTheRainbow.apk

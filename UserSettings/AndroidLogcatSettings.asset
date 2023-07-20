@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R59MC02RD5F",
         "name": "com.DefaultCompany.protover2",
-        "processId": 16664,
+        "processId": 22077,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -36,6 +36,12 @@
             "deviceId": "R59MC02RD5F",
             "name": "com.DefaultCompany.protover2",
             "processId": 16664,
+            "exited": false
+        },
+        {
+            "deviceId": "R59MC02RD5F",
+            "name": "com.DefaultCompany.protover2",
+            "processId": 22077,
             "exited": false
         }
     ],
