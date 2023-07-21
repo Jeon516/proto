@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638253754859563545
-    m_Hash: 4250978866
+      ticks: 638254710203880325
+    m_Hash: 574404453
   m_LockFileStatus:
     m_FilePath: C:/Users/admin/Documents/GitHub/proto/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638253754859607228
-    m_Hash: 1761325792
+      ticks: 638254710203885352
+    m_Hash: 3955673001
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -1761,6 +1761,7 @@ m_PackageAssets:
         all:
         - 1.0.0
         - 3.0.0-exp.1
+        - 3.0.0-exp.3
         compatible:
         - 1.0.0
         verified: 1.0.0

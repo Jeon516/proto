@@ -317,7 +317,7 @@ public class GameProcess : MonoBehaviour
                 correct++;
                 CorrectSound();
             }
-            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "마음의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
+            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "미용의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
             {
                 combo++;
                 correct++;
@@ -410,7 +410,7 @@ public class GameProcess : MonoBehaviour
                 correct++;
                 CorrectSound();
             }
-            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "마음의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
+            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "미용의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
             {
                 combo++;
                 correct++;
@@ -523,7 +523,7 @@ public class GameProcess : MonoBehaviour
                 timerController.timeLeft -= 2f;
                 WrongSound();
             }
-            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "마음의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
+            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "미용의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
             {
                 combo=0;
                 wrongCount++;
@@ -602,7 +602,7 @@ public class GameProcess : MonoBehaviour
                 timerController.timeLeft -= 2f;
                 WrongSound();
             }
-            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "마음의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
+            else if (randomColor3 == "ticket to heaven 9" && textLoader.TextValue == "미용의" && emblemLoader.emblempng == "FantasyEmblem3_256_B_09")
             {
                 combo=0;
                 wrongCount++;
