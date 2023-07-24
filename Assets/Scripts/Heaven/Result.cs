@@ -16,7 +16,6 @@ public class Result : MonoBehaviour
     private void Start()
     {
         gameProcess = GetComponent<GameProcess>(); // GameProcess 스크립트가 붙어 있는 게임 오브젝트에서 컴포넌트를 직접 참조
-
         if (gameProcess == null)
         {
             Debug.LogError("GameProcess 인스턴스를 찾을 수 없습니다.");
@@ -40,9 +39,9 @@ public class Result : MonoBehaviour
             Restart.SetActive(true);
         } // 날짜가 20일인지 아닌지 여부
 
-        int correctCount = gameProcess.CorrectCount;
-        int wrongCount = gameProcess.WrongCount;
-        int totalCount = gameProcess.TotalCount;
+        int correctCount = gameProcess.correct;
+        int wrongCount = gameProcess.wrongCount;
+        int totalCount = gameProcess.totalCount;
 
         float correctRate = (float)correctCount / totalCount * 100f;
         float wrongRate = (float)wrongCount / totalCount * 100f;
@@ -54,6 +53,9 @@ public class Result : MonoBehaviour
     }
     public void OnClick_Restart()
     {
+        gameProcess.correct=0;
+        gameProcess.wrongCount=0;
+        gameProcess.totalCount=0;
         TimerController.Instance.ResetGame();
         gameProcess.dayValue++;
         Restart.SetActive(true);
