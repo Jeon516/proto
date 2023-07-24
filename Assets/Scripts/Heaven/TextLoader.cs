@@ -29,67 +29,6 @@ public class TextLoader : MonoBehaviour
 
     private void LoadTextFromJSON()
     {
-        /*string JSONFilePath = "JsonFiles/Game/Set";
-        string JSONFullPath = Path.Combine("Assets/Resources", JSONFilePath);
-        JSONFullPath += ".json";
-
-        if (File.Exists(JSONFullPath))
-        {
-            string json = File.ReadAllText(JSONFullPath);
-            SetDataList loadedData = JsonUtility.FromJson<SetDataList>(json);
-            if (loadedData != null && loadedData.Sets.Count > 0)
-            {
-                setDataList = loadedData.Sets;
-                string rColor3 = gameProcess.previousRandomColor3;
-
-                float waveProbability = 0f;
-                float otherProbability = 0f;
-
-                List<SetData> matchingSets = setDataList.FindAll(setData => setData.Color == rColor3);
-
-                if (matchingSets.Count > 0)
-                {
-                    waveProbability = (float)gameProcess.SE / 100f;
-                    otherProbability = (float)gameProcess.AE / (matchingSets.Count + 1);
-                }
-                else
-                {
-                    waveProbability = (float)gameProcess.AE / 100f;
-                    otherProbability = waveProbability;
-                }
-
-                bool useWaveText = Random.value < waveProbability;
-
-                string textValue;
-                if (useWaveText)
-                {
-                    // Get wave text or other matching text
-                    int randomIndex = Random.Range(0, matchingSets.Count);
-                    textValue = matchingSets[randomIndex].Sort;
-                }
-                else
-                {
-                    // Get other non-matching text
-                    List<SetData> nonMatchingSets = setDataList.FindAll(setData => setData.Color != rColor3);
-                    int randomIndex = Random.Range(0, nonMatchingSets.Count);
-                    textValue = nonMatchingSets[randomIndex].Sort;
-                }
-
-                // Update textValue with the new value
-                this.textValue = textValue;
-
-                // Set the text to displayText.text
-                displayText.text = textValue;
-            }
-            else
-            {
-                Debug.LogError("셋에 데이터가 없습니다.");
-            }
-        }
-        else
-        {
-            Debug.LogError("파일을 찾을 수 없습니다: " + JSONFullPath);
-        }*/
         TextAsset jsonFile = Resources.Load<TextAsset>("JsonFiles/Game/Set");
         if (jsonFile != null)
         {
@@ -99,28 +38,19 @@ public class TextLoader : MonoBehaviour
             if (loadedData != null && loadedData.Sets.Count > 0)
             {
                 setDataList = loadedData.Sets;
-                string rColor3 = gameProcess.previousRandomColor3;
+                string rColor3 = gameProcess.GetRandomColor3();
 
-                float waveProbability = 0f;
-                float otherProbability = 0f;
-
+                // Set.json파일에서 Color == Randomcolor3인 그룹을 확인
                 List<SetData> matchingSets = setDataList.FindAll(setData => setData.Color == rColor3);
 
-                if (matchingSets.Count > 0)
-                {
-                    waveProbability = (float)gameProcess.SE / 100f;
-                    otherProbability = (float)gameProcess.AE / (matchingSets.Count + 1);
-                }
-                else
-                {
-                    waveProbability = (float)gameProcess.AE / 100f;
-                    otherProbability = waveProbability;
-                }
+                // Probability for assigning Sort value from the same group (SE)
+                float SEProbability = (float)gameProcess.SE / 100f;
 
-                bool useWaveText = Random.value < waveProbability;
+                // Probability for assigning Sort value from other non-matching groups (AE)
+                float AEProbability = (float)gameProcess.AE / 100f;
 
                 string textValue;
-                if (useWaveText)
+                if (matchingSets.Count > 0 && Random.value < SEProbability)
                 {
                     // Get wave text or other matching text
                     int randomIndex = Random.Range(0, matchingSets.Count);

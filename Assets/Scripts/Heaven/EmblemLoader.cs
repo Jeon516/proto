@@ -12,6 +12,12 @@ public class EmblemLoader : MonoBehaviour
     private void Start()
     {
         gameProcess = FindObjectOfType<GameProcess>();
+        if (gameProcess == null)
+        {
+            Debug.LogError("GameProcess object not found in the scene or GameProcess script missing.");
+            return;
+        }
+
         GameProcess.OnButtonClicked += OnGameProcessButtonClicked;
         LoadEmblemImageFromJSON();
     }
@@ -23,51 +29,6 @@ public class EmblemLoader : MonoBehaviour
 
     private void LoadEmblemImageFromJSON()
     {
-        /*string JSONFilePath = "JsonFiles/Game/Set";
-        string JSONFullPath = Path.Combine("Assets/Resources", JSONFilePath);
-        JSONFullPath += ".json";
-
-        if (File.Exists(JSONFullPath))
-        {
-            string json = File.ReadAllText(JSONFullPath);
-            SetDataList setDataList = JsonUtility.FromJson<SetDataList>(json);
-
-            if (setDataList != null && setDataList.Sets.Count > 0)
-            {
-                string randomColor3 = gameProcess.previousRandomColor3; // Use the static emblemcolor variable
-
-                List<SetData> matchingSets = setDataList.Sets.FindAll(setData => setData.Color == randomColor3);
-
-                float matchingEmblemProbability = (float)gameProcess.SE / 100f;
-                float nonMatchingEmblemProbability = (float)gameProcess.AE / 100f;
-
-                bool useMatchingEmblem = Random.value < matchingEmblemProbability;
-
-                string emblemValue;
-                if (useMatchingEmblem && matchingSets.Count > 0)
-                {
-                    int randomIndex = Random.Range(0, matchingSets.Count);
-                    emblemValue = matchingSets[randomIndex].emblemAssets;
-                }
-                else
-                {
-                    List<SetData> nonMatchingSets = setDataList.Sets.FindAll(setData => setData.Color != randomColor3);
-                    int randomIndex = Random.Range(0, nonMatchingSets.Count);
-                    emblemValue = nonMatchingSets[randomIndex].emblemAssets;
-                }
-
-                emblempng = emblemValue; // emblempng 값을 업데이트
-                LoadEmblemImage(emblemValue);
-            }
-            else
-            {
-                Debug.LogError("셋에 데이터가 없습니다.");
-            }
-        }
-        else
-        {
-            Debug.LogError("파일을 찾을 수 없습니다: " + JSONFullPath);
-        }*/
         TextAsset jsonFile = Resources.Load<TextAsset>("JsonFiles/Game/Set");
         if (jsonFile != null)
         {
@@ -76,7 +37,7 @@ public class EmblemLoader : MonoBehaviour
 
             if (setDataList != null && setDataList.Sets.Count > 0)
             {
-                string randomColor3 = gameProcess.previousRandomColor3; // Use the static emblemcolor variable
+                string randomColor3 = gameProcess.GetRandomColor3();
 
                 List<SetData> matchingSets = setDataList.Sets.FindAll(setData => setData.Color == randomColor3);
 

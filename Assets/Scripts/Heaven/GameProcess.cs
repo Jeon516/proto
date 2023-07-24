@@ -43,6 +43,19 @@ public class GameProcess : MonoBehaviour
     public string randomColor3;
     private List<string> previousRandomColors = new List<string>();
 
+    public string GetRandomColor2()
+    {
+        return randomColor2;
+    }
+
+    public string GetRandomColor1()
+    {
+        return randomColor1;
+    }
+    public string GetRandomColor3()
+    {
+        return randomColor3;
+    }
     public string previousRandomColor3; // 이전 값을 저장할 변수 추가
 
     private float timeLeft; // timeLeft 변수 추가

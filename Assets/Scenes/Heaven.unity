@@ -607,6 +607,9 @@ MonoBehaviour:
   TrainRight: {fileID: 1158773868}
   Ticket: {fileID: 1898374405}
   DayText: {fileID: 2107111904}
+  correct: 0
+  wrongCount: 0
+  totalCount: 0
   dayValue: 0
   SN: 0
   AN: 0
