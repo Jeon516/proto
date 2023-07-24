@@ -94,43 +94,43 @@ public class GameProcess : MonoBehaviour
         timerController = FindObjectOfType<TimerController>();
         timeLeft = timerController.timeLeft;
 
-        TL = 40;
-        TR = 40;
-        R = 20;
-        SN = 80;
-        AN = 20;
-        SE = 80;
-        AE = 20;
+        TL = 45;
+        TR = 45;
+        R = 10;
+        SN = 100;
+        AN = 0;
+        SE = 100;
+        AE = 0;
 
         if (dayValue >= 1 && dayValue <= 5)
         {
-            TL = 40;
-            TR = 40;
-            R = 20;
-            SN = 80;
-            AN = 20;
-            SE = 80;
-            AE = 20;
+            TL = 45;
+            TR = 45;
+            R = 10;
+            SN = 100;
+            AN = 0;
+            SE = 100;
+            AE = 0;
         }
         else if (dayValue >= 6 && dayValue <= 15)
         {
-            TL--;
-            TR--;
-            R += 2;
-            SN -= 2;
-            AN += 2;
-            SE -= 2;
-            AE += 2;
+            TL = 45;
+            TR = 45;
+            R = 10;
+            SN = 90;
+            AN = 10;
+            SE = 100;
+            AE = 0;
         }
         else if (dayValue >= 16 && dayValue <= 20)
         {
-            TL = 30;
-            TR = 30;
-            R = 40;
-            SN = 60;
-            AN = 40;
-            SE = 60;
-            AE = 40;
+            TL = 45;
+            TR = 45;
+            R = 10;
+            SN = 95;
+            AN = 5;
+            SE = 95;
+            AE = 5;
         }
 
         LoadSetDataList();
