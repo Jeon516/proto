@@ -62,6 +62,9 @@ public class Result : MonoBehaviour
     }
     public void OnClick_Restart()
     {
+        gameProcess.combo=0;
+        gameProcess.ComboCount=0;
+        gameProcess.Combomax=0;
         gameProcess.correct=0;
         gameProcess.wrongCount=0;
         gameProcess.totalCount=0;

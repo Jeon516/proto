@@ -15,7 +15,7 @@ public class GameProcess : MonoBehaviour
     public Text DayText; // 날짜 텍스트
     public static string emblemcolor;
     public int correct = 0;
-    private int combo = 0;
+    public int combo = 0;
     public int wrongCount = 0;
     public int totalCount = 0;
     private bool isFirstRound = true;
@@ -366,7 +366,7 @@ public class GameProcess : MonoBehaviour
             timerController.timeLeft -= 2f;
             WrongSound();
         }
-        if(combo<=4){
+        if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
             ingamegold+=130;
@@ -473,7 +473,7 @@ public class GameProcess : MonoBehaviour
             timerController.timeLeft -= 2f;
             WrongSound();
         }
-        if(combo<=4){
+        if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
             ingamegold+=130;
@@ -716,7 +716,7 @@ public class GameProcess : MonoBehaviour
             correct++;
             CorrectSound();
         }
-        if(combo<=4){
+        if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
             ingamegold+=130;
