@@ -6,6 +6,8 @@ public class Result : MonoBehaviour
     public Text correctRateText; // 정답률을 표시할 텍스트
     public Text wrongRateText; // 오답률을 표시할 텍스트
     public Text correctPerMinText; // 분당 정답수를 표시할 텍스트
+    public Text currentText;
+    public Text AvgComboText;
     private GameProcess gameProcess; // GameProcess 스크립트의 인스턴스를 참조하는 변수
     public GameObject Return; // 리턴버튼
     public GameObject Restart; // 스타트 버튼
@@ -42,14 +44,21 @@ public class Result : MonoBehaviour
         int correctCount = gameProcess.correct;
         int wrongCount = gameProcess.wrongCount;
         int totalCount = gameProcess.totalCount;
+        int Current = gameProcess.ingamegold;
+        int combomax = gameProcess.Combomax;
+        int combonum = gameProcess.ComboCount;
 
         float correctRate = (float)correctCount / totalCount * 100f;
         float wrongRate = (float)wrongCount / totalCount * 100f;
         float correctPerMin = (float)correctCount / 60;
+        float AvgCombo = (float)combomax/combonum;
 
         correctRateText.text = "정답률: " + correctRate.ToString("F1") + "%";
         wrongRateText.text = "오답률: " + wrongRate.ToString("F1") + "%";
         correctPerMinText.text = "초당 정답수: " + correctPerMin.ToString("F1");
+        currentText.text = "획득 재화량: " + Current.ToString();
+        AvgComboText.text = "평균 콤보 수: " + AvgCombo.ToString("F1");
+
     }
     public void OnClick_Restart()
     {
