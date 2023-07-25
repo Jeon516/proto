@@ -71,6 +71,7 @@ public class Result : MonoBehaviour
         gameProcess.totalCount=0;
         TimerController.Instance.ResetGame();
         gameProcess.dayValue++;
+        gameProcess.UpdateValuesForDay();
         Restart.SetActive(true);
         ResultPref.SetActive(false);
     }

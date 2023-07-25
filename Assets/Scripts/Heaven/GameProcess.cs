@@ -82,6 +82,39 @@ public class GameProcess : MonoBehaviour
         audioSources[1].enabled = true;
         audioSources[1].Play();
     }
+    public void UpdateValuesForDay()
+{
+    if (dayValue >= 1 && dayValue <= 5)
+    {
+        TL = 45;
+        TR = 45;
+        R = 10;
+        SN = 100;
+        AN = 0;
+        SE = 100;
+        AE = 0;
+    }
+    else if (dayValue >= 6 && dayValue <= 15)
+    {
+        TL = 45;
+        TR = 45;
+        R = 10;
+        SN = 90;
+        AN = 10;
+        SE = 100;
+        AE = 0;
+    }
+    else if (dayValue >= 16 && dayValue <= 20)
+    {
+        TL = 45;
+        TR = 45;
+        R = 10;
+        SN = 95;
+        AN = 5;
+        SE = 95;
+        AE = 5;
+    }
+}
     private void Start()
     {
         foreach (var audioSource in audioSources)
@@ -94,44 +127,7 @@ public class GameProcess : MonoBehaviour
         timerController = FindObjectOfType<TimerController>();
         timeLeft = timerController.timeLeft;
 
-        TL = 45;
-        TR = 45;
-        R = 10;
-        SN = 100;
-        AN = 0;
-        SE = 100;
-        AE = 0;
-
-        if (dayValue >= 1 && dayValue <= 5)
-        {
-            TL = 45;
-            TR = 45;
-            R = 10;
-            SN = 100;
-            AN = 0;
-            SE = 100;
-            AE = 0;
-        }
-        else if (dayValue >= 6 && dayValue <= 15)
-        {
-            TL = 45;
-            TR = 45;
-            R = 10;
-            SN = 90;
-            AN = 10;
-            SE = 100;
-            AE = 0;
-        }
-        else if (dayValue >= 16 && dayValue <= 20)
-        {
-            TL = 45;
-            TR = 45;
-            R = 10;
-            SN = 95;
-            AN = 5;
-            SE = 95;
-            AE = 5;
-        }
+        UpdateValuesForDay();
 
         LoadSetDataList();
         LoadTicketImages();
