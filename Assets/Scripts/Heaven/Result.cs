@@ -50,7 +50,7 @@ public class Result : MonoBehaviour
 
         float correctRate = (float)correctCount / totalCount * 100f;
         float wrongRate = (float)wrongCount / totalCount * 100f;
-        float correctPerMin = (float)correctCount / 60;
+        float correctPerMin = (float)correctCount / 90;
         float AvgCombo = (float)combomax/combonum;
 
         correctRateText.text = "정답률: " + correctRate.ToString("F1") + "%";
