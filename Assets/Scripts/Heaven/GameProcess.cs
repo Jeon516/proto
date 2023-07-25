@@ -367,7 +367,7 @@ public class GameProcess : MonoBehaviour
             WrongSound();
         }
         if(combo==0){
-            ingamegold=0;
+            ingamegold+=0;
         }else if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
@@ -476,7 +476,7 @@ public class GameProcess : MonoBehaviour
             WrongSound();
         }
         if(combo==0){
-            ingamegold=0;
+            ingamegold+=0;
         }else if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
@@ -721,7 +721,7 @@ public class GameProcess : MonoBehaviour
             CorrectSound();
         }
         if(combo==0){
-            ingamegold=0;
+            ingamegold+=0;
         }else if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
