@@ -366,7 +366,9 @@ public class GameProcess : MonoBehaviour
             timerController.timeLeft -= 2f;
             WrongSound();
         }
-        if(combo>=1 && combo<=4){
+        if(combo==0){
+            ingamegold=0;
+        }else if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
             ingamegold+=130;
@@ -473,7 +475,9 @@ public class GameProcess : MonoBehaviour
             timerController.timeLeft -= 2f;
             WrongSound();
         }
-        if(combo>=1 && combo<=4){
+        if(combo==0){
+            ingamegold=0;
+        }else if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
             ingamegold+=130;
@@ -716,7 +720,9 @@ public class GameProcess : MonoBehaviour
             correct++;
             CorrectSound();
         }
-        if(combo>=1 && combo<=4){
+        if(combo==0){
+            ingamegold=0;
+        }else if(combo>=1 && combo<=4){
             ingamegold+=100;
         }else if(combo>=5 && combo<=9){
             ingamegold+=130;
