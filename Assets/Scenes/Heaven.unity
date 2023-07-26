@@ -608,16 +608,17 @@ MonoBehaviour:
   Ticket: {fileID: 1898374405}
   DayText: {fileID: 2107111904}
   correct: 0
+  combo: 0
   wrongCount: 0
   totalCount: 0
   dayValue: 0
   ingamegold: 0
   Combomax: 0
   ComboCount: 0
-  SN: 0
-  AN: 0
-  SE: 0
-  AE: 0
+  SN: 50
+  AN: 50
+  SE: 50
+  AE: 50
   randomColor3: 
   previousRandomColor3: 
   audioSources:

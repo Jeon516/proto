@@ -47,11 +47,12 @@ public class Result : MonoBehaviour
         int Current = gameProcess.ingamegold;
         int combomax = gameProcess.Combomax;
         int combonum = gameProcess.ComboCount;
+        int combo = gameProcess.combo;
 
         float correctRate = (float)correctCount / totalCount * 100f;
         float wrongRate = (float)wrongCount / totalCount * 100f;
         float correctPerMin = (float)correctCount / 90;
-        float AvgCombo = (float)combomax/combonum;
+        float AvgCombo = (float)correctCount/(combonum+1);
 
         correctRateText.text = "정답률: " + correctRate.ToString("F1") + "%";
         wrongRateText.text = "오답률: " + wrongRate.ToString("F1") + "%";
