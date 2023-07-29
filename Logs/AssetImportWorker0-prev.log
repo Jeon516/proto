@@ -24,6 +24,7 @@ Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 58862
 Successfully changed project path to: C:/Users/user/OneDrive/Documents/GitHub/proto
@@ -37,6 +38,13 @@ Successfully changed project path to: /Users/jason/Documents/GitHub/proto
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 48.30 ms, found 3 plugins.
 >>>>>>> Stashed changes
+=======
+53382
+Successfully changed project path to: C:/Users/user/OneDrive/Documents/GitHub/proto
+C:/Users/user/OneDrive/Documents/GitHub/proto
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 32.82 ms, found 3 plugins.
+>>>>>>> parent of 258f44a3 (process 수정)
 =======
 53382
 Successfully changed project path to: C:/Users/user/OneDrive/Documents/GitHub/proto
@@ -74,6 +82,7 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.29f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.29f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Registered in 0.001691 seconds.
 =======
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.29f1/Unity.app/Contents/Managed'
@@ -92,8 +101,12 @@ Registered in 0.001447 seconds.
 =======
 Registered in 0.001447 seconds.
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+Registered in 0.001447 seconds.
+>>>>>>> parent of 258f44a3 (process 수정)
 Native extension for LinuxStandalone target not found
 Native extension for OSXStandalone target not found
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -104,10 +117,14 @@ Refreshing native plugins compatible for Editor in 31.57 ms, found 3 plugins.
 =======
 Refreshing native plugins compatible for Editor in 31.57 ms, found 3 plugins.
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+Refreshing native plugins compatible for Editor in 31.57 ms, found 3 plugins.
+>>>>>>> parent of 258f44a3 (process 수정)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.394 seconds
 Domain Reload Profiling:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 	ReloadAssembly (446ms)
@@ -129,6 +146,10 @@ Domain Reload Profiling:
 	ReloadAssembly (394ms)
 		BeginReloadAssembly (47ms)
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+	ReloadAssembly (394ms)
+		BeginReloadAssembly (47ms)
+>>>>>>> parent of 258f44a3 (process 수정)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
@@ -140,6 +161,7 @@ Domain Reload Profiling:
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (105ms)
 			ReleaseScriptCaches (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 			RebuildScriptCaches (20ms)
@@ -168,9 +190,16 @@ Domain Reload Profiling:
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+			RebuildScriptCaches (18ms)
+			SetupLoadedEditorAssemblies (111ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+>>>>>>> parent of 258f44a3 (process 수정)
 				SetLoadedEditorAssemblies (0ms)
 <<<<<<< Updated upstream
 				RefreshPlugins (32ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 				BeforeProcessingInitializeOnLoad (9ms)
@@ -192,12 +221,18 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (50ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+				BeforeProcessingInitializeOnLoad (8ms)
+				ProcessInitializeOnLoadAttributes (50ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+>>>>>>> parent of 258f44a3 (process 수정)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -211,13 +246,20 @@ Registered in 0.004206 seconds.
 =======
 Registered in 0.004206 seconds.
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+Registered in 0.004206 seconds.
+>>>>>>> parent of 258f44a3 (process 수정)
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Native extension for OSXStandalone target not found
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 33.34 ms, found 3 plugins.
+=======
+Refreshing native plugins compatible for Editor in 30.95 ms, found 3 plugins.
+>>>>>>> parent of 258f44a3 (process 수정)
 =======
 Refreshing native plugins compatible for Editor in 30.95 ms, found 3 plugins.
 >>>>>>> parent of 258f44a3 (process 수정)
@@ -238,6 +280,7 @@ Domain Reload Profiling:
 		EndReloadAssembly (593ms)
 			LoadAssemblies (62ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 			SetupTypeCache (203ms)
@@ -268,17 +311,23 @@ Domain Reload Profiling:
 =======
 =======
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+>>>>>>> parent of 258f44a3 (process 수정)
 			SetupTypeCache (207ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (31ms)
 			SetupLoadedEditorAssemblies (218ms)
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 258f44a3 (process 수정)
+=======
 >>>>>>> parent of 258f44a3 (process 수정)
 =======
 >>>>>>> parent of 258f44a3 (process 수정)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (11ms)
 				SetLoadedEditorAssemblies (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -289,10 +338,13 @@ Domain Reload Profiling:
 =======
 =======
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+>>>>>>> parent of 258f44a3 (process 수정)
 				RefreshPlugins (31ms)
 				BeforeProcessingInitializeOnLoad (49ms)
 				ProcessInitializeOnLoadAttributes (120ms)
 				ProcessInitializeOnLoadMethodAttributes (10ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 258f44a3 (process 수정)
 				AfterProcessingInitializeOnLoad (3ms)
@@ -652,6 +704,8 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadMethodAttributes (7ms)
 =======
 >>>>>>> parent of 258f44a3 (process 수정)
+=======
+>>>>>>> parent of 258f44a3 (process 수정)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -665,6 +719,9 @@ Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
 Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+<<<<<<< HEAD
+>>>>>>> parent of 258f44a3 (process 수정)
+=======
 >>>>>>> parent of 258f44a3 (process 수정)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2265 Unused Serialized files (Serialized files now loaded: 0)
@@ -745,6 +802,9 @@ Total: 2.046300 ms (FindLiveObjects: 0.111400 ms CreateObjectMapping: 0.031900 m
 =======
 Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2698.
 Total: 2.052700 ms (FindLiveObjects: 0.093100 ms CreateObjectMapping: 0.030800 ms MarkObjects: 1.825800 ms  DeleteObjects: 0.102300 ms)
+<<<<<<< HEAD
+>>>>>>> parent of 258f44a3 (process 수정)
+=======
 >>>>>>> parent of 258f44a3 (process 수정)
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -760,6 +820,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
 <<<<<<< HEAD
   Time since last request: 439.133280 seconds.
   path: Assets/Resources/Image/Heaven/a clock frame.PNG
@@ -777,6 +838,15 @@ Start importing Assets/Resources/Image/Heaven/tickets/ticket to heaven 9.png usi
 
 ========================================================================
 Received Import Request.
+=======
+  path: Assets/Resources/Image/Heaven/tickets/ticket to heaven 9.png
+  artifactKey: Guid(be40c68e3b5ab4648b1ddbe10a873994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Image/Heaven/tickets/ticket to heaven 9.png using Guid(be40c68e3b5ab4648b1ddbe10a873994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a52d8fa4888ac0d8516a504db6b1826a') in 0.082359 seconds 
+  Import took 0.084952 seconds .
+
+========================================================================
+Received Import Request.
+>>>>>>> parent of 258f44a3 (process 수정)
   Time since last request: 0.000286 seconds.
   path: Assets/Resources/Image/Heaven/Train(Size)/LeftSide/ticket to heaven 35.png
   artifactKey: Guid(bfe5349b46628cf4e98da54d27f306ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -1057,6 +1127,9 @@ Start importing Assets/Resources/Image/Heaven/a clock frame.PNG using Guid(fc294
 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
+>>>>>>> parent of 258f44a3 (process 수정)
+=======
 >>>>>>> parent of 258f44a3 (process 수정)
   Time since last request: 0.000256 seconds.
   path: Assets/Resources/Image/Heaven/Train2.prefab
@@ -1326,6 +1399,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 258f44a3 (process 수정)
+=======
 >>>>>>> parent of 258f44a3 (process 수정)
 =======
 >>>>>>> parent of 258f44a3 (process 수정)
