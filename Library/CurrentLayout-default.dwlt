@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 1565
     y: 51
@@ -29,10 +30,18 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Hierarchy
 >>>>>>> Stashed changes
+=======
+    x: 0
+    y: 43
+    width: 2560
+    height: 989
+  m_ShowMode: 4
+  m_Title: Game
+>>>>>>> parent of 258f44a3 (process 수정)
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -52,6 +61,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     width: 994
     height: 930
@@ -67,6 +77,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 36
 >>>>>>> Stashed changes
+=======
+    width: 2560
+    height: 939
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+  vertical: 0
+  controlID: 89
+>>>>>>> parent of 258f44a3 (process 수정)
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -82,6 +100,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 718
     y: 0
@@ -93,6 +112,12 @@ MonoBehaviour:
     width: 363
     height: 888
 >>>>>>> Stashed changes
+=======
+    x: 1951
+    y: 0
+    width: 609
+    height: 939
+>>>>>>> parent of 258f44a3 (process 수정)
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -117,6 +142,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     width: 201
     height: 418
@@ -126,6 +152,12 @@ MonoBehaviour:
 >>>>>>> Stashed changes
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+    width: 442
+    height: 422
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of 258f44a3 (process 수정)
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -147,6 +179,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     y: 418
     width: 718
@@ -156,6 +189,11 @@ MonoBehaviour:
     width: 1317
     height: 490
 >>>>>>> Stashed changes
+=======
+    y: 422
+    width: 1951
+    height: 517
+>>>>>>> parent of 258f44a3 (process 수정)
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
@@ -184,6 +222,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     width: 994
     height: 980
@@ -191,6 +230,10 @@ MonoBehaviour:
     width: 1680
     height: 938
 >>>>>>> Stashed changes
+=======
+    width: 2560
+    height: 989
+>>>>>>> parent of 258f44a3 (process 수정)
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -214,11 +257,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     width: 994
 =======
     width: 1680
 >>>>>>> Stashed changes
+=======
+    width: 2560
+>>>>>>> parent of 258f44a3 (process 수정)
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -242,6 +289,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     y: 960
     width: 994
@@ -249,6 +297,10 @@ MonoBehaviour:
     y: 918
     width: 1680
 >>>>>>> Stashed changes
+=======
+    y: 969
+    width: 2560
+>>>>>>> parent of 258f44a3 (process 수정)
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -271,6 +323,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     width: 718
     height: 930
@@ -286,6 +339,14 @@ MonoBehaviour:
   vertical: 1
   controlID: 37
 >>>>>>> Stashed changes
+=======
+    width: 1951
+    height: 939
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
+  vertical: 1
+  controlID: 90
+>>>>>>> parent of 258f44a3 (process 수정)
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -305,6 +366,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     width: 718
     height: 418
@@ -320,6 +382,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 38
 >>>>>>> Stashed changes
+=======
+    width: 1951
+    height: 422
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
+  vertical: 0
+  controlID: 91
+>>>>>>> parent of 258f44a3 (process 수정)
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -335,6 +405,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 201
     y: 0
@@ -346,6 +417,12 @@ MonoBehaviour:
     width: 1053
     height: 398
 >>>>>>> Stashed changes
+=======
+    x: 442
+    y: 0
+    width: 1509
+    height: 422
+>>>>>>> parent of 258f44a3 (process 수정)
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -374,6 +451,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 1565
     y: 499
@@ -385,6 +463,12 @@ MonoBehaviour:
     width: 1316
     height: 469
 >>>>>>> Stashed changes
+=======
+    x: 0
+    y: 495
+    width: 1950
+    height: 496
+>>>>>>> parent of 258f44a3 (process 수정)
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -412,9 +496,14 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     m_SelectedIDs: 46450000
     m_LastClickedID: 17734
+=======
+    m_SelectedIDs: 14450000
+    m_LastClickedID: 17684
+>>>>>>> parent of 258f44a3 (process 수정)
     m_ExpandedIDs: 000000001445000016450000184500001a4500001c4500001e450000204500002245000000ca9a3b
 =======
     m_SelectedIDs: 12450000
@@ -528,6 +617,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 2283
     y: 81
@@ -539,6 +629,12 @@ MonoBehaviour:
     width: 362
     height: 867
 >>>>>>> Stashed changes
+=======
+    x: 1951
+    y: 73
+    width: 608
+    height: 918
+>>>>>>> parent of 258f44a3 (process 수정)
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -576,6 +672,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 1565
     y: 81
@@ -587,13 +684,24 @@ MonoBehaviour:
     width: 263
     height: 377
 >>>>>>> Stashed changes
+=======
+    x: 0
+    y: 73
+    width: 441
+    height: 401
+>>>>>>> parent of 258f44a3 (process 수정)
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       m_SelectedIDs: fc0e0000
       m_LastClickedID: 0
+=======
+      m_SelectedIDs: 76430000
+      m_LastClickedID: 17270
+>>>>>>> parent of 258f44a3 (process 수정)
       m_ExpandedIDs: 66fbffff
 =======
       m_SelectedIDs: 44440000
@@ -759,6 +867,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     x: 1766
     y: 81
@@ -770,6 +879,12 @@ MonoBehaviour:
     width: 1051
     height: 377
 >>>>>>> Stashed changes
+=======
+    x: 442
+    y: 73
+    width: 1507
+    height: 401
+>>>>>>> parent of 258f44a3 (process 수정)
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -813,6 +928,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       width: 515
       height: 376
@@ -824,12 +940,19 @@ MonoBehaviour:
     m_Scale: {x: 0.65925926, y: 0.65925926}
     m_Translation: {x: 525.5, y: 178}
 >>>>>>> Stashed changes
+=======
+      width: 1507
+      height: 380
+    m_Scale: {x: 0.35185185, y: 0.35185185}
+    m_Translation: {x: 753.5, y: 190}
+>>>>>>> parent of 258f44a3 (process 수정)
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       x: -960.00006
       y: -700.89325
@@ -847,6 +970,15 @@ MonoBehaviour:
   m_defaultScale: 0.65925926
   m_LastWindowPixelSize: {x: 2102, y: 754}
 >>>>>>> Stashed changes
+=======
+      x: -2141.5264
+      y: -540
+      width: 4283.0527
+      height: 1080
+    m_MinimalGUI: 1
+  m_defaultScale: 0.35185185
+  m_LastWindowPixelSize: {x: 1507, y: 401}
+>>>>>>> parent of 258f44a3 (process 수정)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
