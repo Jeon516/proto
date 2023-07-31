@@ -3,12 +3,12 @@ using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
-    public float gameDuration = 180f; 
-    public Text timerText; 
-    public Button exitButton; 
-    public GameObject startButtonPrefab; 
+    public float gameDuration = 60f;
+    public Text timerText;
+    public Button exitButton;
+    public GameObject startButtonPrefab;
     public GameObject newPrefab;
-    public Button activatePrefabButton; 
+    public Button activatePrefabButton;
     public Button[] interactiveButtons;
     public Button ResultButton;
 
@@ -31,11 +31,11 @@ public class TimerController : MonoBehaviour
     {
         if (allowInteraction)
         {
-            timeLeft -= Time.deltaTime; 
+            timeLeft -= Time.deltaTime;
 
             if (timeLeft <= 0f)
             {
-                EndGame(); 
+                EndGame();
             }
         }
 
@@ -61,7 +61,7 @@ public class TimerController : MonoBehaviour
     private void EndGame()
     {
         ResultButton.interactable = true;
-        allowInteraction = false; 
+        allowInteraction = false;
         exitButton.interactable = true;
         SetInteractiveButtonsInteractable(false);
     }
@@ -136,9 +136,9 @@ public class TimerController : MonoBehaviour
         }
     }
 
-public void OnExitButtonClicked()
-{
-    Debug.Log("Exit button clicked.");
-    ResetGame();
-}
+    public void OnExitButtonClicked()
+    {
+        Debug.Log("Exit button clicked.");
+        ResetGame();
+    }
 }

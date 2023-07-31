@@ -140,7 +140,7 @@ public class GameProcess : MonoBehaviour
         foreach (var audioSource in audioSources)
         {
             audioSource.enabled = false;
-        } // 효과음 비활성화
+        }
         buttonChangeColors.onClick.AddListener(OnChangeColorsButtonClick);
         textLoader = GetComponent<TextLoader>();
         emblemLoader = GetComponent<EmblemLoader>();
